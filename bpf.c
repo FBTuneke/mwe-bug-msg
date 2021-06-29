@@ -1,7 +1,7 @@
 // #include "../linux/usr/include/linux/bpf.h"
 #include <linux/bpf.h>
-// #include "../linux/usr/include/linux/io_uring.h"
-#include <linux/io_uring.h>
+#include "../linux/usr/include/linux/io_uring.h"
+// #include <linux/io_uring.h>
 // #include "../linux/tools/lib/bpf/bpf_helpers.h"
 #include <bpf/bpf_helpers.h>
 

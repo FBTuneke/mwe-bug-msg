@@ -1,5 +1,5 @@
 // #include "../linux/usr/include/linux/bpf.h"
-// #include "io_uring.h"
+// #include <liburing/io_uring.h>
 #include "../linux/usr/include/linux/io_uring.h"
 #include <linux/bpf.h>
 #include <netinet/tcp.h>
@@ -141,8 +141,6 @@ int main(int arg, char **argv)
 
       io_uring_wait_cqe(&ring, &cqe);
       io_uring_cqe_seen(&ring, cqe);
-
-      buf[cqe->res] = 0;
       
       printf("cqe->user_data: %i\n", cqe->user_data);
       printf("cqe->res: %i\n", cqe->res);
